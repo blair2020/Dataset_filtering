@@ -3,6 +3,7 @@
 
 """
 本程序对数据集label中含有白色背景的数据对剔除
+对图像四条边进行一定数量的抽样
 """
 import os
 import cv2
@@ -18,7 +19,7 @@ sats_save_path = 'G:/llx_dataset2/sat/'
 labels_save_path = 'G:/llx_dataset2/label/'
 # 一条边测试点数
 one_side_points = 16
-# 将四个角不为白色的图像复制到新的路径
+# 将四个边抽样不为白色的图像复制到新的路径
 labels = [f for f in os.listdir(labels_path) if f.endswith(".tif")]
 total = len(labels)
 # print(labels)
